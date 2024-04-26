@@ -1,3 +1,6 @@
+// direction
+image_angle = point_direction(x,y,mouse_x,mouse_y) - 90;
+
 // fire
 var _fire = mouse_check_button(mb_left);
 if (_fire && can_shoot)
@@ -12,11 +15,6 @@ if (_fire && can_shoot)
 	can_shoot = false;
 	alarm[0] = shoot_delay;
 }
-
-// follow mouse pointer
-// var _dir = point_direction(x,y,mouse_x,mouse_y) - 90;
-// image_angle = lerp(image_angle, _dir, 0.1);
-image_angle = point_direction(x,y,mouse_x,mouse_y) - 90;
 
 // create hearts randomly
 if (e_spawn && global.cnt < max_num)
