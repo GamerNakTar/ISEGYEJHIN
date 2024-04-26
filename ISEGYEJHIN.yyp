@@ -34,12 +34,21 @@
   },
   "name":"ISEGYEJHIN",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
+    {"id":{"name":"obj_heart","path":"objects/obj_heart/obj_heart.yy",},},
+    {"id":{"name":"obj_jhin","path":"objects/obj_jhin/obj_jhin.yy",},},
+    {"id":{"name":"obj_score","path":"objects/obj_score/obj_score.yy",},},
+    {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
+    {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
+    {"id":{"name":"spr_heart","path":"sprites/spr_heart/spr_heart.yy",},},
+    {"id":{"name":"spr_jhin","path":"sprites/spr_jhin/spr_jhin.yy",},},
+    {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
+    {"id":{"name":"ts_tileset","path":"tilesets/ts_tileset/ts_tileset.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
