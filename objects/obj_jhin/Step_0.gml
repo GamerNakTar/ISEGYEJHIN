@@ -9,11 +9,16 @@ if (_fire && can_shoot)
 	
 	with(_bullet)
 	{
-		move_towards_point(mouse_x, mouse_y,15);
+		move_towards_point(mouse_x, mouse_y,global.bullet_speed);
 	}
 
 	can_shoot = false;
 	alarm[0] = shoot_delay;
+	sprite_index = spr_jhin_shoot;
+	
+	// screen shake
+	layer_set_visible("Shake",true);
+	alarm[2] = 15;
 }
 
 // create hearts randomly
@@ -24,4 +29,10 @@ if (e_spawn && global.cnt < max_num)
 	instance_create_layer(random_range(16,624),random_range(16,260),"Instances",obj_heart);
 	e_spawn = false;
 	alarm[1] = timer_spawn;
+}
+
+global.currtime++;
+if (global.currtime > global.timer)
+{
+	room_goto(rm_result);
 }
