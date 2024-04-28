@@ -16,3 +16,10 @@ global.score = 0;
 // gameover
 global.currtime = 0;
 global.timer = 60*60;
+
+// fire count
+fire_cnt = 1;
+
+// bgm
+audio_play_sound(snd_ult1,0,false);
+alarm[3] = 60*13;

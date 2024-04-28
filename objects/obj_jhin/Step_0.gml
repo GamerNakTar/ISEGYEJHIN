@@ -13,12 +13,45 @@ if (_fire && can_shoot)
 	}
 
 	can_shoot = false;
-	alarm[0] = shoot_delay;
+	if (fire_cnt == 4)
+	{
+		alarm[0] = shoot_delay * 2;
+	}
+	else
+	{
+		alarm[0] = shoot_delay;
+	}
 	sprite_index = spr_jhin_shoot;
 	
 	// screen shake
 	layer_set_visible("Shake",true);
 	alarm[2] = 15;
+	
+	if (fire_cnt == 1)
+	{
+		audio_play_sound(snd_1,0,false);
+		audio_play_sound(snd_fire,0,false);
+		fire_cnt++;
+	}
+	else if (fire_cnt == 2)
+	{
+		audio_play_sound(snd_2,0,false);
+		audio_play_sound(snd_fire,0,false);
+		fire_cnt++;
+	}
+	else if (fire_cnt == 3)
+	{
+		audio_play_sound(snd_3,0,false);
+		audio_play_sound(snd_fire,0,false);
+		fire_cnt++;
+	}
+	else
+	{
+		audio_play_sound(snd_4,0,false);
+		audio_play_sound(snd_fire4,0,false);
+		alarm[6] = 20;
+		fire_cnt = 1;
+	}
 }
 
 // create hearts randomly

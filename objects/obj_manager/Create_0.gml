@@ -1,0 +1,1 @@
+global.tutorial_played = true;
