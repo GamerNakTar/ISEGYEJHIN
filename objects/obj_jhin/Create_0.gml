@@ -9,6 +9,7 @@ e_spawn = true;
 timer_spawn = 180;
 max_num = 10;
 global.cnt = 0;
+global.spawn_cnt = 1;
 
 // score
 global.score = 0;

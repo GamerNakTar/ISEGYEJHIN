@@ -58,8 +58,16 @@ if (_fire && can_shoot)
 if (e_spawn && global.cnt < max_num)
 {
 	global.cnt++;
+	global.spawn_cnt++;
 	random_set_seed(current_time);
-	instance_create_layer(random_range(16,624),random_range(16,260),"Instances",obj_heart);
+	if (global.spawn_cnt % 10 == 0)
+	{
+		instance_create_layer(random_range(16,624),random_range(16,260),"Instances",obj_special_heart);
+	}
+	else
+	{
+		instance_create_layer(random_range(16,624),random_range(16,260),"Instances",obj_heart);
+	}
 	e_spawn = false;
 	alarm[1] = timer_spawn;
 }
